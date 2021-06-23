@@ -1,0 +1,21 @@
+﻿<Window x:Class="OthelloServer.GameFrame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OthelloServer"
+        mc:Ignorable="d"
+        Title="Othello" Height="900" Width="1200.000">
+
+
+	<Grid Name="gfxGrid" Margin="0,0,2,0" KeyDown="GfxGrid_KeyDown_E">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="200"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Button Grid.Column="0" Name="NewGame" Content="Nytt parti" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="166" Height="52" Click="NewGame_Click"/>
+		<Button Grid.Column="0" Name="Quit" Content="Avsluta" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="166" Height="52" Click="Quit_Click"/>
+		<local:GameBoard x:Name="gameboard" Grid.Column="1"></local:GameBoard>
+	</Grid>
+</Window>
+
